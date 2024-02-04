@@ -19,10 +19,10 @@ const Navbar = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick =()=> setIsOpen (!isOpen);
+  const handleClick = () => setIsOpen(!isOpen);
 
   const [isResponseOpen, setIsResponseOpen] = useState(false);
-  const toggle =()=> setIsResponseOpen (!isResponseOpen);
+  const toggle = () => setIsResponseOpen(!isResponseOpen);
 
   const handleCancelClick = () => {
     setIsResponseOpen(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
             {/* List Icon */}
-          <Image
+            <Image
               src="/assets/bar.svg"
               width={0}
               height={0}
@@ -41,21 +41,21 @@ const Navbar = () => {
               className="w-8 h-8 lg:hidden flex"
               onClick={handleClick}
             />
-          {/* Logo image */}
-          <div className="flex items-center">
-            <Image
-              src="/assets/logo.png"
-              alt="My Image"
-              width={45}
-              height={45}
-            />
-            <Link
-              href=""
-              className="text-black text-[22px] font-[800] ms-1 tracking-[-1.5px]"
-            >
-              Zin Tools
-            </Link>
-          </div>
+            {/* Logo image */}
+            <div className="flex items-center">
+              <Image
+                src="/assets/logo.png"
+                alt="My Image"
+                width={45}
+                height={45}
+              />
+              <Link
+                href=""
+                className="text-black text-[22px] font-[800] ms-1 tracking-[-1.5px]"
+              >
+                Zin Tools
+              </Link>
+            </div>
           </div>
           {/*Search Input */}
           <div className=" bg-[#f2f2f2] max-w-[500px] w-full py-[15px] rounded-[30px] px-5   justify-between lg:flex hidden">
@@ -67,14 +67,14 @@ const Navbar = () => {
             <Image src="/assets/search.svg" alt="" width={24} height={24} />
           </div>
           {/* Small screen  search icons */}
-            <Image
-              src="/assets/search.svg"
-              alt=""
-              width={0}
-              height={0}
-              className="w-5 h-5 lg:hidden block"
-              onClick={toggle}
-            />
+          <Image
+            src="/assets/search.svg"
+            alt=""
+            width={0}
+            height={0}
+            className="w-5 h-5 lg:hidden block"
+            onClick={toggle}
+          />
           {/* Sign in btns */}
           <div className="lg:flex hidden">
             <button className="text-[#4c4a53] px-6 p-[15px] font-[600] ">
@@ -103,20 +103,33 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="lg:hidden flex flex-col">
+            <button className="text-[#4c4a53] px-6 p-[15px] font-[600] ">
+              Log in
+            </button>
+            <button className=" bg-[#3567e1] rounded-[30px] px-6 py-[14px] text-white ">
+              Sign up
+            </button>
+          </div>
         </div>
         {/* search tab */}
-        <div className={`fixed left-0 top-0 w-full h-[100vh] z-20 overflow-hidden bg-white p-3 ${isResponseOpen ? "block" : "hidden"}`}>
-        <div className="flex justify-between gap-4 items-center">
-        <input
+        <div
+          className={`fixed left-0 top-0 w-full h-[100vh] z-20 overflow-hidden bg-white p-3 ${
+            isResponseOpen ? "block" : "hidden"
+          }`}
+        >
+          <div className="flex justify-between gap-4 items-center">
+            <input
               type="text"
               className="bg-transparent  rounded-lg w-full focus:outline-none border-[2px] border-[#3567e1] py-3  ps-2 text-black "
               placeholder="Search "
             />
             {/* cancel button */}
-          <button className="text-[#4c4a53]" onClick={handleCancelClick}>
-            cancel
-          </button>
-        </div>
+            <button className="text-[#4c4a53]" onClick={handleCancelClick}>
+              cancel
+            </button>
+          </div>
+          
         </div>
       </div>
     </nav>
