@@ -12,7 +12,7 @@ const Footer = () => {
           </Link>
           <Link href="#">
             <Image
-              src="/assets/youtube.svg"
+              src="/assets/youTube.svg"
               width={20}
               height={20}
               alt=""
