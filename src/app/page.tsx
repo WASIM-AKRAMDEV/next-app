@@ -5,15 +5,21 @@ import ConvertOne from "@/components/ConvertOne/ConvertOne";
 import ConvertTwo from "@/components/ConvertTwo/ConvertTwo";
 import Footer from "@/components/Footer/Footer";
 
+
+
 export default function Home() {
+
+  
+
   return (
-    <main className="">
+    <main className="dark:text-white dark:bg-[#081016]">
       <Navbar />
       <BookCards />
       <SwiperCards/> 
       <ConvertOne/>
       <ConvertTwo/>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
+

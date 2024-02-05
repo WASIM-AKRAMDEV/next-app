@@ -28,7 +28,7 @@ const Navbar = () => {
     setIsResponseOpen(false);
   };
   return (
-    <nav className="py-3 shadow-md bg-white">
+    <nav className="py-3 shadow-md bg-white dark:bg-[#081016]">
       <div className=" mx-auto px-1 sm:px-4 lg:max-w-[1550px] ">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
@@ -51,7 +51,7 @@ const Navbar = () => {
               />
               <Link
                 href=""
-                className="text-black text-[22px] font-[800] ms-1 tracking-[-1.5px]"
+                className="text-black dark:text-white text-[22px] font-[800] ms-1 tracking-[-1.5px]"
               >
                 Zin Tools
               </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
             alt=""
             width={0}
             height={0}
-            className="w-5 h-5 lg:hidden block"
+            className="w-5 h-5 lg:hidden block mr-3"
             onClick={toggle}
           />
           {/* Sign in btns */}
@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
         {/* Nav links */}
         <div
-          className={`text-[#4c4a53] pt-[40px] pb-[10px] lg:overflow-x-auto lg:flex lg:relative lg:shadow-none md:absolute left-0 md:shadow-xl bg-white md:w-full ${
+          className={`text-[#4c4a53] pt-[40px] pb-[10px] lg:overflow-x-auto lg:flex lg:relative lg:shadow-none md:absolute left-0 md:shadow-xl dark:sm:bg-[#081016] sm:bg-white lg:bg-transparent md:w-full ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -114,7 +114,7 @@ const Navbar = () => {
         </div>
         {/* search tab */}
         <div
-          className={`fixed left-0 top-0 w-full h-[100vh] z-20 overflow-hidden bg-white p-3 ${
+          className={`fixed left-0 top-0 w-full h-[100vh] z-20 overflow-hidden bg-white dark:bg-[#081016] p-3 ${
             isResponseOpen ? "block" : "hidden"
           }`}
         >
